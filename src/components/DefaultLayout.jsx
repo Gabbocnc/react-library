@@ -7,17 +7,17 @@ import AppFooter from "./AppFooter";
 export default function DefaultLayout() {
     return (
         <>
-            <header>
-                <AppHeader />
-            </header>
+
+            <AppHeader />
+
 
             <main>
                 <Outlet />
             </main>
 
-            <footer>
-                <AppFooter />
-            </footer>
+
+            <AppFooter />
+
 
 
         </>
