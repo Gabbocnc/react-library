@@ -3,8 +3,10 @@ import Home from './pages/Home'
 import Contacts from './pages/Contacts'
 import Books from './pages/Books'
 import About from './pages/About'
+import DefaultLayout from './components/DefaultLayout'
 
 import './App.css'
+
 
 
 function App() {
@@ -15,10 +17,16 @@ function App() {
       <BrowserRouter>
 
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/books' element={<Books />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contacts' element={<Contacts />} />
+
+          <Route element={<DefaultLayout />}>
+
+            <Route path='/' element={<Home />} />
+            <Route path='/books' element={<Books />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contacts' element={<Contacts />} />
+
+          </Route>
+
         </Routes>
 
       </BrowserRouter>
